@@ -1,9 +1,13 @@
 package chess;
 
+
+//declaration of all variables that interact with the spots on the chess board
 public class Spot {
 	private Piece piece;
 	private int x;
 	private int y;
+	
+//creation of class spot and it's purposes
 	
 	public Spot(int x, int y, Piece piece) {
 		this.setPiece(piece);

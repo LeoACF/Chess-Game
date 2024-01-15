@@ -1,6 +1,6 @@
 package chess;
 
-public class Piece {
+public abstract class Piece {
 	private boolean killed = false;
 	private boolean white = false;
 	
@@ -26,5 +26,6 @@ public class Piece {
 	}
 	
 	public abstract boolean canMove(Board board, Spot start, Spot end);	
-	
 }
+//creation of the specific classes like King, Queen, bishop, etc.
+
