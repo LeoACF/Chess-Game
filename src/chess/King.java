@@ -19,7 +19,7 @@ public class King extends Piece{
 	public boolean canMove(Board board, Spot start, Spot end) {
 	
 		//preventing pieces with equal color from moving to the same spot
-		if(end.getPiece().iswhite() == this.iswhite()) {
+		if(end.getPiece().isWhite() == this.isWhite()) {
 			return false;
 		}
 		int x = Math.abs(start.getX() - end.getX());
@@ -27,6 +27,17 @@ public class King extends Piece{
 		if (x + y == 1) {
 			return true;
 		}
-		return false;
+		return this.isValidCastling(board, start, end);
+	}
+	private boolean isValidCastling(Board board, Spot start, Spot end) {
+		if(this.iscastlingDone()) {
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+	public boolean isCastlingMove(Spot start, Spot end) {
+		return true;
 	}
 }

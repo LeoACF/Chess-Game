@@ -9,7 +9,7 @@ public abstract class Piece {
 	}
 	
 	//simple class to indicate white pieces
-	public boolean iswhite() {
+	public boolean isWhite() {
 		return this.white;
 	}
 	
